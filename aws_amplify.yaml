@@ -1,0 +1,36 @@
+AWSTemplateFormatVersion: 2010-09-09
+Parameters:
+  GitRepositoryUrl:
+    Description: The git repository url which contains the hugo site.
+    Type: String
+  BranchName:
+    Description: The branch which will be deployed to AWS Amplify.
+    Type: String
+  AppName:
+    Description: The name you want to use for the AWS Amplify app.
+    Type: String
+Resources:
+  AwsAmplifyApp:
+    Type: AWS::Amplify::App
+    Properties:
+      Name: !Ref AppName
+      Repository: !Ref GitRepositoryUrl
+      BuildSpec: |-
+        version: 0.1
+        frontend:
+          phases:
+            build:
+              commands:
+                - hugo
+          artifacts:
+            baseDirectory: public
+            files:
+              - '**/*'
+          cache:
+            paths:[]
+  AppBranch:
+    Type: AWS::Amplify::Branch
+    Properties:
+      AppId: !GetAtt AwsAmplifyApp.AppId
+      AccessToken:
+      Branch: !Ref BranchName
