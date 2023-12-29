@@ -13,4 +13,4 @@ Alternatively, you can do one of the following:
 ## Setting up AWS Amplify
 Once you have a hugo site ready to be deployed, go to the aws amplify console in AWS ([or click here](https://console.aws.amazon.com/amplify/home)). You should find yourself at the landing page for AWS amplify. If you haven't created an app before, it should look like this.
 
-![Landing page](./content/tutoral/landing.png)
+![Landing page](https://raw.githubusercontent.com/adambnoel/hugo_aws_amplify/main/content/tutorial/landing.png)
