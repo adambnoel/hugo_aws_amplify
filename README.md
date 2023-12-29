@@ -58,6 +58,8 @@ Once deployed, you will be redirected to a status screen.
 
 ![Deploying](https://raw.githubusercontent.com/adambnoel/hugo_aws_amplify/main/content/tutorial/deploying.png)
 
-After a few minutes, your application should be deployed. To view it, navigate to the url
+After a few minutes, your application should be deployed. To see your newly deployed hugo app, click the link located below main.
 
 ![Complete](https://raw.githubusercontent.com/adambnoel/hugo_aws_amplify/main/content/tutorial/complete.png)
+
+You should see your hugo site.
